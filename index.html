@@ -342,11 +342,10 @@
     }
 
     .dashboard-box h3 {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.72);
-      margin-bottom: 12px;
-      font-weight: 600;
-    }
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis; /* If the text overflows, it'll show '...' */
+}
 
     .dashboard-box ul {
       list-style: none;
