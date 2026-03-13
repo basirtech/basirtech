@@ -387,10 +387,12 @@
 .bars {
   display: flex;
   align-items: flex-end;
-  gap: 14px;
+  justify-content: center;
+  gap: 16px;
   height: 170px;
+  margin-top: 20px;
 }
-
+    
 .bar-group {
 
   height: 100%;
@@ -401,10 +403,10 @@
 }
 
 .bar {
-  width: 100%;
-  min-height: 20px;
+  width: 38px;
   background: linear-gradient(to top, var(--primary), #d9e8ff);
-  border-radius: 16px 16px 6px 6px;
+  border-radius: 8px 8px 4px 4px;
+  min-height: 20px;
   animation: rise 1.2s ease forwards;
   transform-origin: bottom;
   opacity: 0.95;
