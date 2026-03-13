@@ -341,18 +341,13 @@
       min-height: 130px;
     }
 
-    .dashboard-box h3 {
-   white-space: nowrap;
-   overflow: hidden;
-   text-overflow: ellipsis; /* If the text overflows, it'll show '...' */
+    .dashboard-box h3, .dashboard-box ul {
+  display: inline-block; /* Ensures both elements are inline */
+  white-space: nowrap;   /* Prevent wrapping */
+  margin: 0;             /* Remove extra margin */
+  padding: 0;            /* Remove extra padding */
 }
 
-    .dashboard-box ul {
-      list-style: none;
-      display: grid;
-      gap: 8px;
-      font-size: 14px;
-    }
 
     .dashboard-box li::before {
       content: "• ";
@@ -946,8 +941,8 @@
             <h3>Top motivations</h3>
             <ul>
               <li>Youth-led influence</li>
-              <li>Demand for quality</li>
-              <li>High spending apetite</li>
+              <li>Quality over quantity</li>
+              <li>High spending appetite</li>
             </ul>
           </div>
 
