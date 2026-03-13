@@ -358,10 +358,12 @@
     }
 
     .chart-card {
-      background: rgba(255, 255, 255, 0.06);
-      border-radius: 24px;
-      padding: 18px;
-    }
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  padding: 18px;
+  overflow: hidden;
+}
+
 .chart-title {
   font-size: 14px;
   color: rgba(255,255,255,0.72);
@@ -369,15 +371,46 @@
   font-weight: 600;
   white-space: nowrap;
 }
-    .chart-header {
-      display: flex;
-      justify-content: space-between;
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.72);
-      margin-bottom: 18px;
-    }
-.chart-card .chart-source {
+
+.bars {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 12px;
+  height: 170px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 0 0 48px;
+  height: 100%;
+}
+
+.bar {
+  width: 32px;
+  min-height: 20px;
+  background: linear-gradient(to top, var(--primary), #d9e8ff);
+  border-radius: 6px 6px 2px 2px;
+  animation: rise 1.2s ease forwards;
+  transform-origin: bottom;
+  opacity: 0.95;
+}
+
+.bar-year {
   margin-top: 6px;
+  font-size: 10px;
+  color: rgba(255,255,255,0.45);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.chart-card .chart-source {
+  margin-top: 10px;
   font-size: 10px !important;
   color: rgba(255,255,255,0.45);
   font-weight: 500;
@@ -942,39 +975,38 @@
           </div>
         </div>
 
-        <div class="chart-card">
-          <div class="chart-header">
+       <div class="chart-card">
   <h3 class="chart-title">Gulf interest in Gen Z since 2020</h3>
 
-<div class="bars">
-  <div class="bar-group">
-    <div class="bar" style="height:16%"></div>
-    <span class="bar-year">2020</span>
+  <div class="bars">
+    <div class="bar-group">
+      <div class="bar" style="height:16%"></div>
+      <span class="bar-year">2020</span>
+    </div>
+    <div class="bar-group">
+      <div class="bar" style="height:21%"></div>
+      <span class="bar-year">2021</span>
+    </div>
+    <div class="bar-group">
+      <div class="bar" style="height:25%"></div>
+      <span class="bar-year">2022</span>
+    </div>
+    <div class="bar-group">
+      <div class="bar" style="height:42%"></div>
+      <span class="bar-year">2023</span>
+    </div>
+    <div class="bar-group">
+      <div class="bar" style="height:85%"></div>
+      <span class="bar-year">2024</span>
+    </div>
+    <div class="bar-group">
+      <div class="bar" style="height:100%"></div>
+      <span class="bar-year">2025</span>
+    </div>
   </div>
-  <div class="bar-group">
-    <div class="bar" style="height:21%"></div>
-    <span class="bar-year">2021</span>
-  </div>
-  <div class="bar-group">
-    <div class="bar" style="height:25%"></div>
-    <span class="bar-year">2022</span>
-  </div>
-  <div class="bar-group">
-    <div class="bar" style="height:42%"></div>
-    <span class="bar-year">2023</span>
-  </div>
-  <div class="bar-group">
-    <div class="bar" style="height:85%"></div>
-    <span class="bar-year">2024</span>
-  </div>
-  <div class="bar-group">
-    <div class="bar" style="height:100%"></div>
-    <span class="bar-year">2025</span>
-  </div>
+
+  <p class="chart-source"><strong>Source:</strong> Google Trends, Q1 2020–Q4 2025, 6 GCC markets</p>
 </div>
-</div>
-<p class="chart-source"><strong>Source:</strong> Google Trends, Q1 2020- Q4 2025, 6 GCC markets</p>
-        </div>
       </div>
     </div>
   </header>
